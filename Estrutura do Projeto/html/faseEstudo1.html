@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+  <html>
+    <link rel="shortcut icon" href="../img/favicon.ico" >
+      <head>
+        <meta charset="utf-8">
+        <title>Jogo</title>
+        <link rel="stylesheet" type="text/css" href="../css/CSSEstudo.css"/>
+        <link rel="stylesheet" type="text/css" href="css/animacao.css">
+        <link rel="stylesheet" href="animate.min.css">
+        <script>
+          //SLIDE DE IMAGENS
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("image"); 
+
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+
+              x[slideIndex-1].style.display = "block";  
+            }
+
+          //SLIDE DE DESCRIÇÃO
+            var slideIn = 1;
+            showDi(slideIn);
+
+            function plusDi(n) {
+              showDi(slideIn += n);
+            }
+
+            function showDi(n) {
+              var i;
+              var k = document.getElementByClassName("texto");
+
+              if (n > k.length) {
+                slideIn = 1
+              }
+              if (n < 1) {
+                slideIn = k.length
+              }
+
+              for (i = 0; i < k.length; i++) {
+                k[i].style.display = "none";  
+              }
+              
+              k[slideIn-1].style.display = "block";  
+            } 
+
+        </script>
+      </head>
+      <body>
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+
+        <nav class="menu">
+          <ul>
+              <li><p class="talkinghands">Speaking Hands</p></li>
+          </ul>
+        </nav>
+
+        <div id="cartaEstudo1">
+          <a href="" onclick="sair('cartaEstudo1')"><img src="img/setaAmarelaDeVerdade.png" alt="" class="setaAmarela"></a>
+
+          <center>
+            <div class="container">
+              <img src="img/CartaEstudo.png" alt="Avatar" class="image" width="79%">
+            </div>        
+          </center>
+
+          <center>
+            <img src="img/bordaDescrição.png" alt="" class="bordaDescrição">
+          </center>
+        </div>
+
+      
+      </body>
+  </html>
